@@ -1,0 +1,20 @@
+{
+  "name": "crud-mongoose",
+  "version": "1.0.0",
+  "description": "CRUD com express, MongoDB e NodeJS",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "author": "Diego Feitoza",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.20",
+    "node-restful": "^0.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
