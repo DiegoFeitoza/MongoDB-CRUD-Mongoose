@@ -1,4 +1,5 @@
-const port = 6060
+require('dotenv/config')
+
 
 const bodyParser = require('body-parser')
 const express = require('express')
@@ -8,7 +9,10 @@ const mongoose = require('mongoose')
 var Usuarios = require('./config/schemas/usuario')
 var cors = require('./config/cors')
 
-mongoose.connect('mongodb://localhost:27017/diegodb')
+var urlVirt = process.env.MONGODB_URL
+var urlLocal = process.env.MONGODB_LOCAL
+
+mongoose.connect(urlVirt,{ useNewUrlParser: true })
  
 //Configurando api para JSON
 server.use(bodyParser.urlencoded({ extended: true }))
@@ -67,6 +71,8 @@ server.route('/edit/:id')
                     })                    
         })
 
+const port = (process.env.PORT) ? process.env.PORT : 6060
+
 server.listen(port, function(){
-    console.log(`Rodando BACKEND na porta ${port}`)
+    console.log(`Rodando BACKEND na porta ${port}\n================\nAPP - ${process.env.APP_NAME}`)
 })

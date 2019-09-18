@@ -4,12 +4,14 @@
   "description": "CRUD com express, MongoDB e NodeJS",
   "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "start": "node src/app.js"
   },
   "author": "Diego Feitoza",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^8.1.0",
     "express": "^4.16.4",
     "mongoose": "^5.4.20",
     "node-restful": "^0.2.6"
